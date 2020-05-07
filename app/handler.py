@@ -24,6 +24,8 @@ class ChatHandler(WebSocketHandler):
         # 消息通知各个客户端,某个IP客户端加入聊天室
         for client in clients.values():
             client['object'].write_message(self.package_message(client["id"], "login", "客户端[%s]登录聊天室" % self.id))
+            client['object'].write_message(
+                self.package_message(client["id"], "chat", "https://github.com/e-word/chatRoom.git"))
         pass
 
     # 处理接收的消息
