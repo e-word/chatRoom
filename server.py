@@ -24,5 +24,5 @@ if __name__ == '__main__':
         debug=True
     )
     http_server = tornado.httpserver.HTTPServer(app)
-    http_server.listen(options.port, address='192.168.96.128')
+    http_server.listen(options.port, address='127.0.0.1')
     tornado.ioloop.IOLoop.current().start()

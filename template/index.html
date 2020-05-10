@@ -115,7 +115,7 @@
         }
     </style>
     <script>
-        var socket = new WebSocket("ws://192.168.96.128:5000/message");
+        var socket = new WebSocket("ws://127.0.0.1:5000/message");
         socket.onmessage = function (event) {
             try {
                 message = JSON.parse(event.data)
